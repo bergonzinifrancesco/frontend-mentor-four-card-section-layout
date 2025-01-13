@@ -79,17 +79,15 @@ body {
   font-size: 15px;
 }
 h1 {
-  font-size: 1.4rem
+  font-size: 1.4em;
 }
 h2 {
-  font-size: 1.2rem
+  font-size: 1.2em;
 }
 h3 {
-  font-size: 1.1rem
+  font-size: 1.1em;
 }
-footer {
-  font-size: 0.5rem;
-}
+
 /* utilities */
 .color-light-gray {
   color: hsl(0, 0%, 98%);
@@ -141,8 +139,12 @@ footer {
 }
 
 .text-normal {
-  font-size: 15px;
+  font-size: 1em;
 }
+.text-sm {
+  font-size: 0.5em;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -155,31 +157,28 @@ footer {
 .text-align-center {
   text-align: center;
 }
-.thin-line-height {
-  line-height: 0.6em;
-}
 
 .p-4 {
-  padding: 1rem;
+  padding: 1em;
 }
 .gap-4 {
-  gap: 1rem;
+  gap: 1em;
 }
 .gap-6 {
-  gap: 1.5rem
+  gap: 1.5em;
 }
 
 .my-20 {
-  margin-top: 5rem;
+  margin: 5em 0;
 }
 .my-10 {
-  margin-top: 4rem;
+  margin: 4em 0;
 }
 .my-6 {
-  margin-top: 3rem;
+  margin: 3em 0;
 }
 .my-4 {
-  margin-top: 2rem;
+  margin: 2em 0;
 }
 .normal-line-height {
   line-height: 1;
@@ -190,7 +189,6 @@ footer {
 .leading-tight {
   line-height: 0.8;
 }
-
 .h-fit {
   height: fit-content;
 }
@@ -203,6 +201,7 @@ footer {
 .text-balance {
   text-wrap: balance;
 }
+
 /* composition */
 .flex {
   display: flex;
@@ -216,16 +215,19 @@ footer {
   display: inline-block;
   position: relative;
 }
+.flow-gap > * + * {
+  margin: 2em 0;
+}
 
 /* block */
 .card {
-  padding: 1.5rem;
+  padding: 1.5em;
   text-align: start;
   display: flex;
   flex-direction: column;
   align-items: start;
   background: white;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   & * {
     margin: 0;
@@ -236,12 +238,12 @@ footer {
   }
   & p {
     color:hsl(229, 6%, 66%);
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 0.9em;
+    line-height: 1.5em;
     margin-block-start: 0.8em;
   }
   & img, image {
-    margin-block-start: 2rem;
+    margin-block-start: 2em;
     align-self: end;
     justify-self: end;
   }
