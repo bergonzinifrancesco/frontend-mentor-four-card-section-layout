@@ -87,6 +87,34 @@ h2 {
 h3 {
   font-size: 1.1em;
 }
+header {
+  align-self: center;
+  text-wrap: balance;
+}
+
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  header {
+    align-self: center;
+    text-wrap: auto;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    & p {
+      margin-top: 1.5em;
+      width: 60%;
+    }
+  }
+}
 
 /* utilities */
 .color-light-gray {
@@ -249,6 +277,56 @@ h3 {
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: grid;
+    align-self: center;
+    gap: 1.5em;
+    grid-auto-flow: column;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+  }
+
+  .card {
+    position: relative;
+    padding: 2em;
+    text-align: start;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 3;
+    grid-template-rows: 5;
+    width: 350px;
+    height: 250px;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    & * {
+      margin: 0;
+    }
+    & h2 {
+      color:hsl(234, 12%, 34%);
+      line-height: 0.8em;
+      grid-row: 1;
+    }
+    & p {
+      color:hsl(229, 6%, 66%);
+      font-size: 0.9em;
+      line-height: 2em;
+      grid-row: 2;
+    }
+    & img, image {
+      grid-row: 3;
+    }
+  }
+}
+
 /* exceptions */
 .card[color="cyan"] {
   border-top: 0.3em solid hsl(180, 62%, 55%);
@@ -261,4 +339,14 @@ h3 {
 }
 .card[color="blue"] {
   border-top: 0.3em solid hsl(212, 86%, 64%);
+}
+
+@media screen and (min-width: 1440px) {
+  .card[span] {
+    grid-area: span 2;
+    align-self: center;
+  }
+  .card[align-self-end] {
+    align-self: end;
+  }
 }
